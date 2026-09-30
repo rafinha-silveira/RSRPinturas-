@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RSR Pinturas | Pintura Residencial e Comercial</title>
+  <title>RSR Pinturas | Pintura em Geral</title>
   
   <!-- Favicon e Fontes -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
@@ -13,65 +13,67 @@
 
   <style>
     /* Estilos Gerais */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Open Sans', sans-serif; color: #333; background: #f8f9fa; line-height: 1.6; }
-    .lobster-regular { font-family: "Lobster", sans-serif; font-weight: 400; font-style: normal; }
+    body { background: #ffffff; color: #333; line-height: 1.5; }
+    
+    .lobster { font-family: 'Lobster', cursive; color: #FF6B00; }
+    .caixa { max-width: 900px; margin: 0 auto; padding: 0 15px; }
 
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+    /* Topo Fixo com Logótipo */
+    header { position: sticky; top: 0; background: #0F2C59; padding: 10px 0; z-index: 10; }
+    header .caixa { display: flex; justify-content: space-between; align-items: center; }
+    
+    /* Estilo do Logótipo no Canto Superior */
+    .logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; font-weight: bold; }
+    .img-logo { height: 45px; width: auto; border-radius: 6px; }
 
-    /* Cabeçalho Fixado */
-    header { position: sticky; top: 0; background: #0F2C59; padding: 1rem 0; z-index: 100; }
-    header .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { color: #fff; font-size: 1.5rem; text-decoration: none; font-weight: bold; }
-    .logo span { color: #FF6B00; }
-    nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 600; font-size: 0.95rem; }
+    header a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav a { margin-left: 12px; font-size: 14px; }
     nav a:hover { color: #FF6B00; }
 
-    /* Banner Principal */
-    .hero { background: #0F2C59; color: #fff; text-align: center; padding: 4rem 1rem; border-bottom: 4rem solid #FF6B00; }
-    .hero h1 { font-size: 2.2rem; margin-bottom: 0.8rem; }
-    .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; }
+    /* Banner Inicial */
+    .banner { background: #0F2C59; color: #fff; text-align: center; padding: 40px 15px; border-bottom: 5px solid #FF6B00; }
+    .banner h1 { font-size: 24px; margin-bottom: 10px; }
+    .banner p { margin-bottom: 20px; color: #ddd; }
 
-    /* Botão Padrão */
-    .btn { display: inline-block; background: #FF6B00; color: #fff; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: bold; border: none; cursor: pointer; }
+    /* Botão */
+    .btn { background: #FF6B00; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; border: none; cursor: pointer; display: inline-block; }
     .btn:hover { background: #e05e00; }
 
-    /* Seções e Títulos */
-    section { padding: 3.5rem 0; }
-    h2 { text-align: center; color: #0F2C59; font-size: 1.8rem; margin-bottom: 1.5rem; }
+    /* Seções */
+    section { padding: 30px 15px; max-width: 900px; margin: 0 auto; }
+    h2 { color: #0F2C59; text-align: center; margin-bottom: 20px; font-size: 20px; }
 
-    /* Grid Responsivo para Serviços e Galeria */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
+    /* Organização em Grade (Serviços e Fotos) */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .card { border: 1px solid #eee; padding: 15px; border-radius: 5px; text-align: center; background: #f9f9f9; }
+    .card h3 { color: #0F2C59; margin-bottom: 5px; font-size: 16px; }
 
-    /* Cards de Serviços */
-    .card { background: #fff; padding: 1.5rem; border-radius: 6px; border: 1px solid #ddd; text-align: center; }
-    .card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
-    .card h3 { color: #0F2C59; margin-bottom: 0.5rem; }
-
-    /* Galeria de Fotos */
-    figure { background: #fff; border-radius: 6px; overflow: hidden; border: 1px solid #ddd; }
-    figure img { width: 100%; height: 180px; object-fit: cover; display: block; }
-    figcaption { padding: 0.75rem; text-align: center; font-size: 0.9rem; color: #666; font-weight: 600; }
+    figure { border: 1px solid #eee; border-radius: 5px; overflow: hidden; }
+    figure img { width: 100%; height: 150px; object-fit: cover; display: block; }
+    figcaption { padding: 8px; font-size: 13px; text-align: center; background: #f9f9f9; color: #555; }
 
     /* Formulário */
-    form { max-width: 500px; margin: 0 auto; background: #fff; padding: 1.5rem; border-radius: 6px; border: 1px solid #ddd; }
-    .field { margin-bottom: 1rem; }
-    label { display: block; margin-bottom: 0.3rem; font-weight: 600; color: #0F2C59; }
-    input, textarea { width: 100%; padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+    form { max-width: 400px; margin: 0 auto; }
+    .campo { margin-bottom: 12px; }
+    label { display: block; margin-bottom: 4px; font-weight: 600; color: #0F2C59; font-size: 14px; }
+    input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
 
     /* Rodapé */
-    footer { background: #0F2C59; color: #fff; padding: 2rem 0 1rem; text-align: center; margin-top: 2rem; }
-    footer a { color: #FF6B00; text-decoration: none; }
-    .footer-links { margin: 1rem 0; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    footer { background: #0F2C59; color: #fff; text-align: center; padding: 20px 15px; margin-top: 30px; font-size: 14px; }
+    footer a { color: #FF6B00; text-decoration: none; margin: 0 5px; font-weight: 600; }
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho com Navegação por Âncoras -->
+  <!-- Menu do Topo com Logótipo -->
   <header>
-    <div class="container">
-      <a href="#" class="logo">RSR <span class="lobster-regular">Pinturas</span></a>
+    <div class="caixa">
+      <a href="#" class="logo-link">
+        <img src="logo.jpg" alt="Logo RSR Pinturas" class="img-logo">
+        <span style="font-size: 18px;">RSR <span class="lobster">Pinturas</span></span>
+      </a>
       <nav>
         <a href="#sobre">Quem Somos</a>
         <a href="#servicos">Serviços</a>
@@ -81,99 +83,92 @@
     </div>
   </header>
 
-  <!-- Banner Hero -->
-  <div class="hero">
-    <div class="container">
-      <h1>Pintura profissional com acabamento impecável</h1>
-      <p>Transformamos ambientes residenciais e comerciais com agilidade, limpeza e garantia de qualidade.</p>
-      <a href="#contato" class="btn">Solicitar Orçamento</a>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="caixa">
+      <h1>Pintura Profissional com Acabamento Perfeito</h1>
+      <p>Serviços rápidos, limpos e com garantia para sua casa ou empresa.</p>
+      <a href="#contato" class="btn">Pedir Orçamento</a>
     </div>
   </div>
 
-  <main class="container">
-    <!-- Quem Somos -->
-    <section id="sobre">
-      <h2>Quem Somos</h2>
-      <p style="text-align: center; max-width: 700px; margin: 0 auto;">
-        A <strong>RSR Pinturas</strong> é especializada em serviços de pintura em geral. Trabalhamos com foco no detalhe, cumprindo prazos rigorosos e mantendo o ambiente limpo do início ao fim da obra.
-      </p>
-    </section>
+  <!-- Quem Somos -->
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p style="text-align: center; color: #555;">
+      A <strong>RSR Pinturas</strong> faz pinturas de qualidade em geral. Trabalhamos com cuidado, entregando tudo no prazo e deixando o local sempre limpo.
+    </p>
+  </section>
 
-    <!-- Serviços -->
-    <section id="servicos">
-      <h2>Nossos Serviços</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="icon">🏠</div>
-          <h3>Pintura Residencial</h3>
-          <p>Casas e apartamentos. Preparação de superfícies, emassamento e pintura interna ou externa.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🏢</div>
-          <h3>Pintura Comercial</h3>
-          <p>Lojas e escritórios com atendimento em horários flexíveis para não parar sua empresa.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🎨</div>
-          <h3>Efeitos Decorativos</h3>
-          <p>Aplicação de cimento queimado, texturas, grafiato e pinturas de destaque para interiores.</p>
-        </div>
+  <!-- Serviços -->
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Pintura Residencial</h3>
+        <p style="font-size: 14px; color: #666;">Casas e apartamentos. Preparação e pintura interna ou externa.</p>
       </div>
-    </section>
-
-    <!-- Galeria -->
-    <section id="galeria">
-      <h2>Nossos Trabalhos</h2>
-      <div class="grid">
-        <figure>
-          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400" alt="Fachada">
-          <figcaption>Pintura de Fachada</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400" alt="Cimento Queimado">
-          <figcaption>Efeito Cimento Queimado</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400" alt="Ambiente Interno">
-          <figcaption>Sala Comercial</figcaption>
-        </figure>
-        <figure>
-          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400" alt="Acabamento de Teto">
-          <figcaption>Acabamento Fino em Gesso</figcaption>
-        </figure>
+      <div class="card">
+        <h3>Pintura Comercial</h3>
+        <p style="font-size: 14px; color: #666;">Lojas e escritórios com horários que não atrapalham suas vendas.</p>
       </div>
-    </section>
+      <div class="card">
+        <h3>Efeitos Decorativos</h3>
+        <p style="font-size: 14px; color: #666;">Cimento queimado, grafiato e paredes decorativas modernas.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Formulário de Agendamento -->
-    <section id="contato">
-      <h2>Solicite um Agendamento</h2>
-      <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
-        <div class="field">
-          <label for="nome">Nome Completo</label>
-          <input type="text" id="nome" name="nome" required>
-        </div>
-        <div class="field">
-          <label for="email">E-mail Corporativo/Pessoal</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="data">Data Desejada para Visita</label>
-          <input type="date" id="data" name="data" required>
-        </div>
-        <button type="submit" class="btn" style="width: 100%;">Enviar Pedido</button>
-      </form>
-    </section>
-  </main>
+  <!-- Galeria -->
+  <section id="galeria">
+    <h2>Fotos dos Trabalhos</h2>
+    <div class="grid">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400" alt="Fachada">
+        <figcaption>Pintura de Fachada</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400" alt="Cimento Queimado">
+        <figcaption>Cimento Queimado</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400" alt="Escritório">
+        <figcaption>Sala Comercial</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400" alt="Teto">
+        <figcaption>Acabamento no Teto</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section id="contato">
+    <h2>Agende uma Visita</h2>
+    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Enviado com sucesso!');">
+      <div class="campo">
+        <label for="nome">Seu Nome</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div class="campo">
+        <label for="email">Seu E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="campo">
+        <label for="data">Dia da Visita</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+      <button type="submit" class="btn" style="width: 100%;">Enviar Pedido</button>
+    </form>
+  </section>
 
   <!-- Rodapé -->
   <footer>
-    <div class="container">
-      <p><strong>RSR Pinturas</strong> &copy; 2026 - Todos os direitos reservados.</p>
-      <div class="footer-links">
-        <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Google Maps</a>
-      </div>
+    <p><strong>RSR Pinturas</strong> &copy; 2026</p>
+    <div style="margin-top: 10px;">
+      <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a> |
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+      <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Google Maps</a>
     </div>
   </footer>
 
