@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSR Pinturas | Pintura em Geral</title>
+  
+  <!-- Favicon e Fontes -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: #ffffff; color: #333; line-height: 1.5; }
+    
+    .lobster { font-family: 'Lobster', cursive; color: #FF6B00; }
+    .caixa { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+
+    header { position: sticky; top: 0; background: #0F2C59; padding: 12px 0; z-index: 10; }
+    header .caixa { display: flex; justify-content: space-between; align-items: center; }
+    header a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav a { margin-left: 12px; font-size: 14px; }
+    nav a:hover { color: #FF6B00; }
+
+    .banner { background: #0F2C59; color: #fff; text-align: center; padding: 40px 15px; border-bottom: 5px solid #FF6B00; }
+    .banner h1 { font-size: 24px; margin-bottom: 10px; }
+    .banner p { margin-bottom: 20px; color: #ddd; }
+
+    .btn { background: #FF6B00; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; border: none; cursor: pointer; display: inline-block; }
+    .btn:hover { background: #e05e00; }
+
+    section { padding: 30px 15px; max-width: 900px; margin: 0 auto; }
+    h2 { color: #0F2C59; text-align: center; margin-bottom: 20px; font-size: 20px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .card { border: 1px solid #eee; padding: 15px; border-radius: 5px; text-align: center; background: #f9f9f9; }
+    .card h3 { color: #0F2C59; margin-bottom: 5px; font-size: 16px; }
+
+    figure { border: 1px solid #eee; border-radius: 5px; overflow: hidden; }
+    figure img { width: 100%; height: 150px; object-fit: cover; display: block; }
+    figcaption { padding: 8px; font-size: 13px; text-align: center; background: #f9f9f9; color: #555; }
+
+    form { max-width: 400px; margin: 0 auto; }
+    .campo { margin-bottom: 12px; }
+    label { display: block; margin-bottom: 4px; font-weight: 600; color: #0F2C59; font-size: 14px; }
+    input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+
+    footer { background: #0F2C59; color: #fff; text-align: center; padding: 20px 15px; margin-top: 30px; font-size: 14px; }
+    footer a { color: #FF6B00; text-decoration: none; margin: 0 5px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Menu do Topo -->
+  <header>
+    <div class="caixa">
+      <a href="#" style="font-size: 20px;">RSR <span class="lobster">Pinturas</span></a>
+      <nav>
+        <a href="#sobre">Quem Somos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div class="caixa">
+      <h1>Pintura Profissional com Acabamento Perfeito</h1>
+      <p>Serviços rápidos, limpos e com garantia para sua casa ou empresa.</p>
+      <a href="#contato" class="btn">Pedir Orçamento</a>
+    </div>
+  </div>
+
+  <!-- Quem Somos -->
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p style="text-align: center; color: #555;">
+      A <strong>RSR Pinturas</strong> faz pinturas de qualidade em geral. Trabalhamos com cuidado, entregando tudo no prazo e deixando o local sempre limpo.
+    </p>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Pintura Residencial</h3>
+        <p style="font-size: 14px; color: #666;">Casas e apartamentos. Preparação e pintura interna ou externa.</p>
+      </div>
+      <div class="card">
+        <h3>Pintura Comercial</h3>
+        <p style="font-size: 14px; color: #666;">Lojas e escritórios com horários que não atrapalham suas vendas.</p>
+      </div>
+      <div class="card">
+        <h3>Efeitos Decorativos</h3>
+        <p style="font-size: 14px; color: #666;">Cimento queimado, grafiato e paredes decorativas modernas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section id="galeria">
+    <h2>Fotos dos Trabalhos</h2>
+    <div class="grid">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400" alt="Fachada">
+        <figcaption>Pintura de Fachada</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400" alt="Cimento Queimado">
+        <figcaption>Cimento Queimado</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400" alt="Escritório">
+        <figcaption>Sala Comercial</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400" alt="Teto">
+        <figcaption>Acabamento no Teto</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section id="contato">
+    <h2>Agende uma Visita</h2>
+    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Enviado com sucesso!');">
+      <div class="campo">
+        <label for="nome">Seu Nome</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div class="campo">
+        <label for="email">Seu E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="campo">
+        <label for="data">Dia da Visita</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+      <button type="submit" class="btn" style="width: 100%;">Enviar Pedido</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p><strong>RSR Pinturas</strong> &copy; 2026</p>
+    <div style="margin-top: 10px;">
+      <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a> |
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+      <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Google Maps</a>
+    </div>
+  </footer>
+
+</body>
+</html>
