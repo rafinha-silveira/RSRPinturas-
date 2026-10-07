@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel Horizontal com Imagens</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #0f172a;
+    }
+
+    /* Moldura em formato paisagem fixo */
+    .slider-wrapper {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      height: 450px; /* Altura fixa para manter o modo paisagem */
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Trilha dos slides (4 slides = 400% de largura) */
+    .slider-track {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      animation: autoSlide 12s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+
+    /* Pausa a animação ao passar o cursor */
+    .slider-wrapper:hover .slider-track {
+      animation-play-state: paused;
+    }
+
+    /* Ajuste forçado de cada imagem */
+    .slide-img {
+      width: 25%;
+      height: 100%;
+      object-fit: cover; /* Corta os excessos sem esticar a imagem */
+      object-position: center; /* Centraliza o foco da imagem */
+      display: block;
+    }
+
+    /* Animação horizontal para 4 slides */
+    @keyframes autoSlide {
+      0%, 20% {
+        transform: translateX(0%);
+      }
+      25%, 45% {
+        transform: translateX(-25%);
+      }
+      50%, 70% {
+        transform: translateX(-50%);
+      }
+      75%, 95% {
+        transform: translateX(-75%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <img class="slide-img" src="https://picsum.photos/800/450?random=1&quot; alt="Imagem 1">
+      <img class="slide-img" src="https://picsum.photos/800/450?random=2&quot; alt="Imagem 2">
+      <img class="slide-img" src="https://picsum.photos/800/450?random=3&quot; alt="Imagem 3">
+      <img class="slide-img" src="https://picsum.photos/800/450?random=4&quot; alt="Imagem 4">
+    </div>
+  </div>
+
+</body>
+</html>
